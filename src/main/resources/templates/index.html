@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link data-th-href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link data-th-href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div id="title">
+            <h1>Заказы</h1>
+        </div>
+        <table class="table table-striped" id="allOrders">
+            <thead>
+            <tr>
+                <th width="70%">Состав заказа</th>
+                <th>Номер заказа</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="result" data-th-each="order : ${orders}">
+                <td>[[${order.name}]]</td>
+                <td>[[${order.number}]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
